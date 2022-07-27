@@ -1,9 +1,10 @@
 import { promises as fs } from 'fs';
 import { Request, Response } from 'express';
+import { catchAsync } from '../utils';
 
 const WORDS_COUNT = 10;
 
-export const getWords = async (req: Request, res: Response) => {
+export const getWords = catchAsync(async (req: Request, res: Response) => {
   const data: Data = JSON.parse(await fs.readFile('./server/db/data.json', 'utf8'));
   const words = data.wordList;
   const selectedWords: Word[] = [];
@@ -21,4 +22,4 @@ export const getWords = async (req: Request, res: Response) => {
   });
 
   res.json(selectedWords);
-};
+});

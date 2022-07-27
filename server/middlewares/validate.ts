@@ -20,7 +20,6 @@ export const validate: ValidationFn = (schema) => (req, res, next) => {
     const errorMessage = error.details.map((details) => details.message).join(', ');
     return next({ statusCode: httpStatus.BAD_REQUEST, message: errorMessage });
   }
-
   Object.assign(req, value);
   return next();
 };

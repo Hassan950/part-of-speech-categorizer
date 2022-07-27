@@ -1,8 +1,12 @@
 import express from 'express';
 
 export default () => {
+  const req = { params: {}, query: {}, body: {} };
+
   const res: any = {};
   res.status = jest.fn();
   res.json = jest.fn();
-  return res as express.Response;
+
+  const next = jest.fn();
+  return { req, res, next };
 };

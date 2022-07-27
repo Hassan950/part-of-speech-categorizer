@@ -3,11 +3,16 @@ import dotenv from 'dotenv';
 import routes from './routes';
 import httpStatus from 'http-status';
 import { errorHandler } from './middlewares';
+import bodyParser from 'body-parser';
 
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT;
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use('/api', routes);
 
