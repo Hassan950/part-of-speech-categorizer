@@ -102,5 +102,6 @@
   },
   "exclude": [
     "server/tests",
+    "client"
   ]
 }
