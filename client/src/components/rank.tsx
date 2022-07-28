@@ -1,15 +1,14 @@
-import { Button, CircularProgress, Container, LinearProgress, Typography } from '@mui/material';
+import { Button, CircularProgress, Container, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
 import { useAxios } from '../hooks';
-import { useNavigate } from 'react-router-dom';
 
-type Rank = {
+type RankObject = {
   rank: number;
 };
 
 type RankResponse = {
-  response: Rank | null;
+  response: RankObject | null;
   loading: boolean;
 };
 

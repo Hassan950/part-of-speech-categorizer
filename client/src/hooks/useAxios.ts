@@ -25,6 +25,7 @@ export const useAxios = ({
       .then((res) => setResponse(res.data))
       .catch((err) => setError(err))
       .finally(() => setLoading(false));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { response, error, loading };

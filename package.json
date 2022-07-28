@@ -7,7 +7,7 @@
     "test": "jest --watchAll --verbose",
     "test:cli": "jest --verbose",
     "build": "npx tsc",
-    "start": "node dist/index.js",
+    "start": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\" \" cd client && npm start \"",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
   },
   "keywords": [],
