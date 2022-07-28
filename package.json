@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --verbose",
-    "test:cli": "jest --verbose",
+    "test:once": "jest --verbose",
     "build": "npx tsc",
     "start": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\" \" cd client && npm start \"",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""

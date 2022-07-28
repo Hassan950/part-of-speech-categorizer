@@ -18,7 +18,7 @@ You will also see any lint errors in the console.
 
 Launches jest in the interactive watch mode.
 
-### `npm run test:cli`
+### `npm run test:once`
 
-Launches jest tests in the cli mode.
+Launches jest tests once.
 
